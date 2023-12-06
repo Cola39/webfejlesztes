@@ -1,0 +1,319 @@
+/** ÁLTALÁNOS **/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background-color: #fefae0;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container>* {
+    height: fit-content;
+    margin: 1%;
+}
+
+header {
+    padding: 30px 0;
+    background-color: #283618;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+article {
+    flex: 1 1 100%;
+}
+
+article p,
+article h3 {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+figure {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+footer {
+    padding: 15px 0;
+    background-color: #283618;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+nav {
+    flex: 1 1 100%;
+    background-color: #283618;
+    padding-bottom: 5px;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #bc6c25;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background-color: #dda15e;
+}
+
+nav ul li a:hover {
+    background-color: #606c38;
+}
+
+
+/** index.html **/
+
+article table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    font-size: small;
+}
+
+article table tr td {
+    background-color: #FAEDCD;
+    border: 2px solid #BC6C25;
+    text-align: center;
+}
+
+article table tr.fejlec {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    color: #283618;
+}
+
+article table tr td.stilus {
+    text-align: left;
+}
+
+article table tr td ul {
+    list-style-type: circle;
+}
+
+article ul li {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+figure img.index {
+    border: #BC6C25 solid 2px;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+}
+
+
+/** barokk.html, klasszicizmus.html, romantika.html **/
+
+article ol li {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+figcaption {
+    margin-right: 20px;
+    text-align: center;
+}
+
+figure audio {
+    width: 100%;
+}
+
+figure.audio {
+    border-top: 2px dotted #BC6C25;
+    padding: 10px 0;
+    border-bottom: 2px dotted #BC6C25;
+}
+
+figure img.zeneszerzo {
+    border: #BC6C25 solid 2px;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+}
+
+figure p {
+    text-align: center;
+}
+
+figure p a {
+    font-weight: bold;
+    color: #283618;
+}
+
+figure p a:hover {
+    color: #606c38;
+}
+
+
+/** galeria.html **/
+
+.galeria {
+    margin: auto;
+    width: 100vw;
+    height: 150vw;
+}
+
+article h2.galeriaszoveg {
+    margin: 1%;
+}
+
+
+/** nyeremenyjatek.html **/
+
+body.nyeremenyjatek {
+    background-image: url(../kepek/hatter.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.nyeremenyjatek {
+    background-color: rgba(254, 250, 224, 0.3);
+}
+
+article form ol li {
+    text-align: left;
+    margin-left: 20px;
+}
+
+article form input.mybutton,
+article form input.valasz,
+article form textarea.valasz {
+    background-color: #FAEDCD;
+    border: 2px solid #BC6C25;
+    color: #BC6C25;
+    padding: 2px;
+}
+
+article form input.mybutton {
+    cursor: pointer;
+    width: 100px;
+}
+
+input.mybutton:hover {
+    background-color: #BC6C25;
+    border-color: #BC6C25;
+    color: #FAEDCD;
+}
+
+input.mybutton:active {
+    background-color: #dda15e;
+    border-color: #dda15e;
+    color: #FAEDCD;
+}
+
+label.error {
+    color: #283618;
+}
+
+
+/** RESZPONZIVITÁS **/
+
+@media all and (min-width: 600px) {
+    nav {
+        flex-basis: 100%;
+    }
+
+    article {
+        flex-basis: 100%;
+    }
+
+    figure {
+        flex-basis: 100%;
+    }
+
+    figure.audio {
+        border: 0;
+        border-left: #BC6C25 dotted 2px;
+        padding-left: 10px;
+        margin-left: 20px;
+    }
+
+    figure img.index {
+        padding: 30px;
+    }
+
+    article table {
+        font-size: medium;
+    }
+
+    article table tr.fejlec {
+        font-size: large;
+        padding: 5px;
+    }
+
+    .galeria {
+        margin: auto;
+        width: 80vw;
+        height: 100vw;
+    }
+}
+
+@media all and (min-width: 768px) {
+    nav {
+        flex-basis: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        display: inline-block;
+        width: 20%;
+        margin: 3px;
+    }
+
+    article {
+        flex-basis: 75%;
+    }
+
+    figure {
+        flex-basis: 100%;
+    }
+
+    figure.audio {
+        flex-basis: 20%;
+        border-left: #BC6C25 dotted 2px;
+        padding-left: 10px;
+    }
+
+    figure img.index {
+        padding: 50px;
+    }
+
+    .galeria {
+        margin: auto;
+        width: 50vw;
+        height: 50vw;
+    }
+}

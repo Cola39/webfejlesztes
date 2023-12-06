@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Klasszikus zene">
+    <meta name="copyright" content="Tanulási célokra">
+    <meta name="author" content="Rezsek Fanni Zita">
+    <title>Nyereményjáték</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="kepek/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost&display=swap">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+
+<body class="nyeremenyjatek">
+    <header>
+        <h1>Nyereményjáték</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="barokk.html">Barokk</a></li>
+            <li><a href="klasszicizmus.html">Klasszicizmus</a></li>
+            <li><a href="romantika.html">Romantika</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+            <li><a class="active" href="#">Nyereményjáték</a></li>
+        </ul>
+    </nav>
+    <div class="container nyeremenyjatek">
+        <article>
+            <h2>Töltse ki a nyereményjátékunkat és nyerje meg a főnyereményt!</h2>
+            <p>Vegyen részt nyereményjátékunkban, és nyerje meg értékes nyereményeink valamelyikét!</p>
+            <br>
+
+            <form action="#" id="urlap" novalidate>
+                <ol>
+                    <li>
+                        <p><label>Mikor született Liszt Ferenc?<br><input class="valasz" type="date" name="liszt"
+                                    id="liszt_szuletes"></label></p>
+                    </li>
+                    <li>
+                        <p><label>Melyik volt W. A. Mozart utolsó operája?<br><input class="valasz" type="text"
+                                name="mozart" size="40" placeholder="Ide írd a választ!" id="varazsfuvola"></label></p>
+                    </li>
+                    <li>
+                        <p>Kik tartoznak a bécsi klasszikusok közé?<br>
+                        <label><input type="checkbox" name="becsi[]" value="beethoven" id="beethoven"> Ludwig van
+                            Beethoven</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="vivaldi" id="vivaldi"> Antonio
+                            Vivaldi</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="mozart" id="mozart"> Wolfgang Amadeus
+                            Mozart</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="liszt" id="liszt"> Liszt Ferenc</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="bach" id="bach"> Johann Sebastian
+                            Bach</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="schumann" id="schumann"> Robert
+                            Schumann</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="haydn" id="haydn"> Joseph Haydn</label><br>
+                        <label><input type="checkbox" name="becsi[]" value="chopin" id="chopin"> Franz Frederic
+                            Chopin</label></p>
+                    </li>
+                    <li>
+                        <p>Melyik zeneszerzőhöz köthető "A négy évszak" című hegedűversenyekből álló mű?<br>
+                        <label><input type="radio" name="nokturn" value="schumann"> R. Schumann</label><br>
+                        <label><input type="radio" name="nokturn" value="vivaldi" id="evszak"> A.
+                            Vivaldi</label><br>
+                        <label><input type="radio" name="nokturn" value="Mozart"> J. Haydn</label><br></p>
+                    </li>
+                    <li>
+                        <p>Melyik országban született F. F. Chopin?<br>
+                        <select name="chopin" size="1" id="lengyel">
+                            <option value="lengyel">Lengyelország</option>
+                            <option value="magyar">Magyarország</option>
+                            <option value="francia">Franciaország</option>
+                        </select></p>
+                    </li>
+                </ol>
+                <br>
+                <h3>Személyes adatok</h3>
+                <p><label>Név: <input class="valasz" type="text" name="nev" placeholder="Gipsz Jakab" required></label>
+                </p>
+                <p><label>Email-cím: <input class="valasz" type="email" name="email"
+                            placeholder="gipsz.jakab@tanulo.stud-corvinus.hu" size="40" required></label></p>
+                <p><label>Telefonszám: <input class="valasz" type="tel" name="telefon" value="06-" maxlength="12"
+                            required></label></p>
+                <p><label>Elfogadom a nyereményjátékban való részvétel feltételeit <input type="checkbox"
+                            name="elfogad"></label></p>
+                <p><label>Kérjük véleményezze pár mondatban weboldalunkat!<br><textarea name="velemeny" class="valasz"
+                            rows="5" cols="80"></textarea></label></p><br>
+                <input class="mybutton" type="submit" value="Elküldés" id="elkuld">
+                <input class="mybutton" type="reset" value="Alaphelyzet">
+            </form>
+            <script src="script.js"></script>
+        </article>
+    </div>
+    <footer>
+        <p>Rezsek Fanni Zita</p>
+        <p>2023</p>
+        <p>Budapesti Corvinus Egyetem</p>
+    </footer>
+</body>
+
+</HTML>
